@@ -1,0 +1,255 @@
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../fonts/SourceSansPro-SemiBold.woff2") format("woff2"), url("../fonts/SourceSansPro-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../fonts/SourceSansPro-Regular.woff2") format("woff2"), url("../fonts/SourceSansPro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+}
+
+header,
+nav,
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer {
+  border-top: 2px solid #1abc9c;
+}
+
+header {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+ul {
+  list-style-type: none;
+}
+
+nav > ul {
+  margin: 0;
+  padding: 0;
+}
+nav > ul > li {
+  display: block;
+}
+
+a {
+  color: #03a9f4;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline dotted;
+}
+
+.button {
+  text-decoration: none;
+  border: 0;
+  color: white;
+  background-color: #007ac1;
+  padding: 10px 30px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.button.app-btn {
+  border-radius: 28px;
+}
+.button.app-btn.ps {
+  background-color: #c0392b;
+}
+.button.app-btn.as {
+  background-color: #34495e;
+}
+.button:hover {
+  text-decoration: none;
+  background-color: #03a9f4;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+h1 > a > img, .title > a > img {
+  vertical-align: middle;
+}
+
+#doctors,
+#infos,
+#services,
+#about,
+#facts,
+#banner,
+#appointment,
+#news {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+#application, #appointment {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#infos > div {
+  text-align: center;
+}
+
+.doctor,
+.services-card,
+#news > div {
+  display: flex;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  flex: 0 1 24%;
+  height: 310px;
+}
+.doctor img,
+.services-card img,
+#news > div img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.fact {
+  display: flex;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  flex: 0 1 24%;
+}
+.fact img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+#news > div {
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+.dropdown-button:hover + .dropdown {
+  display: block;
+}
+
+.dropdown-button {
+  position: relative;
+}
+
+.nav > li {
+  display: inline;
+  padding: 10px;
+}
+
+#about > div {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 40px 80px;
+}
+
+.fa {
+  color: #3498db;
+}
+
+input[type=text],
+input[type=email],
+input[type=date],
+textarea {
+  margin: 40px 25px;
+  width: 400px;
+  display: block;
+  border: none;
+  padding: 10px 0;
+  border-bottom: solid 1px #007ac1;
+  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #007ac1 4%);
+  background-position: -400px 0;
+  background-size: 400px 100%;
+  background-repeat: no-repeat;
+  color: #003a5b;
+}
+input[type=text]:focus, input[type=text]:valid,
+input[type=email]:focus,
+input[type=email]:valid,
+input[type=date]:focus,
+input[type=date]:valid,
+textarea:focus,
+textarea:valid {
+  box-shadow: none;
+  outline: none;
+  background-position: 0 0;
+}
+input[type=text]:focus::-webkit-input-placeholder, input[type=text]:valid::-webkit-input-placeholder,
+input[type=email]:focus::-webkit-input-placeholder,
+input[type=email]:valid::-webkit-input-placeholder,
+input[type=date]:focus::-webkit-input-placeholder,
+input[type=date]:valid::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder,
+textarea:valid::-webkit-input-placeholder {
+  color: #007ac1;
+  font-size: 11px;
+  transform: translateY(-20px);
+  visibility: visible !important;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial {
+  padding: 16px;
+  margin: 16px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.testimonial > img {
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.draw {
+  width: 50%;
+}
+
+/*# sourceMappingURL=app.css.map */
