@@ -142,10 +142,13 @@ h1>a>img, .title>a>img {
     }
 }
 .fact {
-    display: flex;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    display: block;
     text-align: center;
     flex: 0 1 24%;
+    b {
+        font-size: 30px;
+        color: $dark-color;
+    }
 
     img {
         max-width: 100%;
